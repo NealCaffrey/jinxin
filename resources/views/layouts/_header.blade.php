@@ -119,7 +119,7 @@
                     <div class="sh-menu-mob-search">
                         <div class="sh-menu-mob-search-container">
                             <div class="sh-search-form">
-                                <form class="search-input-mob" id="search-submit-sm">
+                                <form class="search-input-mob" id="search-submit-sm" action="/search">
                                     <button type="submit" class="icon-pos-search">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 17 17">
                                             <circle cx="7" cy="7" r="6.5" stroke="#fff"></circle>

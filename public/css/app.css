@@ -11110,6 +11110,7 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
 }
 .header-container .sh-nav-toggle .sh-nav-mob .sh-menu-mob-search-container .sh-search-form .search-input-mob label {
   width: 100%;
