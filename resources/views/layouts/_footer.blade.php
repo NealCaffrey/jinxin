@@ -50,14 +50,16 @@
                         </div>
                         <div class="footer-menu col-lg-3">
                             <div class="title">
-                                产品服务
+                                产品中心
                                 <span class="btn-toggle-x"></span>
                             </div>
+                            @if(!empty($category))
                             <ul class="footer-menu-item">
-                                <li><a href="/product"><span>工作站</span></a></li>
-                                <li><a href="/product"><span>服务器</span></a></li>
-                                <li><a href="/product"><span>网络存储</span></a></li>
+                                @foreach($category as $cate)
+                                    <li><a href="/product?category={{ $cate['id'] }}"><span>{{ $cate['name'] }}</span></a></li>
+                                @endforeach
                             </ul>
+                            @endif
                         </div>
                         <div class="footer-menu col-lg-3">
                             <div class="title">
@@ -72,7 +74,7 @@
                         </div>
                         <div class="footer-menu col-lg-3">
                             <div class="title">
-                                支持
+                                技术支持
                                 <span class="btn-toggle-x"></span>
                             </div>
                             <ul class="footer-menu-item">

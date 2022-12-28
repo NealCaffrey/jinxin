@@ -21,6 +21,7 @@ Route::group([
     $router->resource('attribute_category', 'AttributeCategoryController');
     $router->resource('attribute', 'AttributeController');
     $router->resource('product', 'ProductController');
+    $router->resource('slide', 'SlideController');
 
     $router->get('/api/nav_tree', 'commonController@getNavTree');
     $router->get('/api/category_list', 'commonController@getCategoryList');

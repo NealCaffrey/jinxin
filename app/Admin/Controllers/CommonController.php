@@ -58,7 +58,7 @@ class CommonController extends AdminController
      */
     public function getCategoryListTwo()
     {
-        return Category::where('parent_id', '!=', 0)->get(['id', 'parent_id', 'name as text'])->toArray();
+        return Category::get(['id', 'parent_id', 'name as text'])->toArray();
     }
 
     public function getBrandList()

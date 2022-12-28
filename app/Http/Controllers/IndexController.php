@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Example;
 use App\Models\News;
+use App\Models\Slide;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -14,6 +16,11 @@ class IndexController extends Controller
      */
     public function index()
     {
+        $slides = Slide::orderByDesc('orders')->get()->toArray();
+        $brands = Brand::orderByDesc('order')->get()->toArray();
+
+        view()->share('slides', $slides);
+        view()->share('brands', $brands);
         return view('home');
     }
 

@@ -9,9 +9,8 @@
                 </div>
             </div>
 
-            <div class="row" style="margin-top: 30px;margin-bottom: 30px;">
+            <div class="row" style="margin-top: 30px;">
                 <div class="col-12">
-                    <hr>
                 </div>
             </div>
 
@@ -19,7 +18,6 @@
 
                 <div class="col-12 col-lg-2" style="padding-bottom: 20px;">
                     <div class="product-filter-title">
-                        <h4 class="filter-title">筛选</h4>
                         <div class="filter-reset">
                             <span id="filter-product">搜索</span>
                         </div>

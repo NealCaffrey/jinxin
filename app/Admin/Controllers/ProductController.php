@@ -46,7 +46,7 @@ class ProductController extends AdminController
                 ->options('/api/brand_list');
 
             $form->text('name');
-            $form->image('image')->uniqueName()->autoUpload();;
+            $form->image('image')->uniqueName()->autoUpload();
             $form->embeds('attribute', '属性', function ($form) {
                 $attribute = Attribute::all();
                 //属性字段

@@ -12,7 +12,7 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         //分类
-        $category = Category::where('parent_id', '!=', 0)->get();
+        $category = Category::all();
         //品牌
         $brand = Brand::all();
 

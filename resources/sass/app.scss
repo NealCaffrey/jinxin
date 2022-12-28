@@ -150,7 +150,7 @@
                 }
                 .sh-nav-link-active {
                     .sh-nav-link-text:before {
-                        background-color: #0067e6;
+                        background-color: #fff;
                     }
                 }
             }
@@ -439,7 +439,7 @@
     }
 }
 #home {
-    background-color: #f3f7fa;
+    background-color: #F5F6F7;
     .slidershow {
         background-color: #fff;
         position: relative;
@@ -460,6 +460,12 @@
                 display: block;
                 background-color: #fff;
                 transition: opacity 0.5s;
+                background-repeat: no-repeat;
+                background-size: cover;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
         .flex-control-nav {
@@ -502,7 +508,6 @@
         }
     }
     .small {
-        margin-top: 4px;
         position: relative;
         overflow: hidden;
     }
@@ -584,6 +589,26 @@
     .bg4:hover:before {
         scale: (1.1);
     }
+    .section {
+        overflow: hidden;
+    }
+    .brand {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        h2 {
+            text-align: center;
+        }
+        background-color: #fff;
+    }
+    .brand-list {
+        margin-top: 50px;
+        img {
+            width: 80%;
+        }
+        .brand-info {
+            margin-top: 20px;
+        }
+    }
 }
 #footer-tools {
     background-color: #1c2024;
@@ -620,7 +645,7 @@
     .title {
         font-size: 20px;
         color: #2e3742;
-        border-bottom: 1px solid #2e3742;
+        //border-bottom: 1px solid #2e3742;
         padding: 10px 0 10px;
         margin: 0 auto 5px;
         line-height: 32px;
@@ -678,6 +703,9 @@
             a:hover {
                 text-decoration: none;
                 color: #000;
+            }
+            a:visited {
+                color: #2e3742;
             }
         }
     }
@@ -1277,6 +1305,20 @@
 }
 
 @media screen and (max-width: 1024px) {
+    #home {
+        .brand-list {
+            margin-top: 50px;
+            img {
+                width: 100%;
+            }
+            .brand-info {
+                margin-top: 20px;
+            }
+        }
+        .slider {
+            background-position: -400px 0px;
+        }
+    }
     .header-container {
         height: 50px;
         width: 100%;

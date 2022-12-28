@@ -12,26 +12,22 @@
 
                         @if(!empty($category))
                             <div class="sh-nav-link">
-                                <div class="sh-nav-link-text">产品</div>
+                                <div class="sh-nav-link-text">产品中心</div>
                                 <div class="sh-nav-link-wrapper" style="display: none">
                                     <div class="sh-menu">
                                         <div class="sh-menu-grid-container">
-                                            @foreach($category as $cate)
-                                                <div class="sh-menu-grid">
-                                                    <div class="sh-menu-list">
-                                                        <header class="sh-menu-list-header">
-                                                            <div class="sh-menu-list-header-title">{{$cate['name']}}</div>
-                                                        </header>
-                                                        @if(!empty($cate['son']))
-                                                            <div class="sh-menu-list-link-container">
-                                                                @foreach($cate['son'] as $children)
-                                                                    <div class="sh-menu-list-link"><a href="/product?category={{$children['id']}}">{{$children['name']}}</a></div>
-                                                                @endforeach
-                                                            </div>
-                                                        @endif
-                                                    </div>
+                                            <div class="sh-menu-grid">
+                                                <div class="sh-menu-list">
+                                                    <header class="sh-menu-list-header">
+                                                        <div class="sh-menu-list-header-title"></div>
+                                                    </header>
+                                                    @foreach($category as $cate)
+                                                        <div class="sh-menu-list-link-container">
+                                                            <div class="sh-menu-list-link"><a href="/product?category={{$cate['id']}}">{{$cate['name']}}</a></div>
+                                                        </div>
+                                                    @endforeach
                                                 </div>
-                                            @endforeach
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -46,22 +42,18 @@
                                         <div class="sh-nav-link-wrapper" style="display: none">
                                             <div class="sh-menu">
                                                 <div class="sh-menu-grid-container">
-                                                    @foreach($nav['son'] as $son)
-                                                        <div class="sh-menu-grid">
-                                                            <div class="sh-menu-list">
-                                                                <header class="sh-menu-list-header">
-                                                                    <div class="sh-menu-list-header-title">{{$son['title']}}</div>
-                                                                </header>
-                                                                @if(!empty($son['son']))
-                                                                    <div class="sh-menu-list-link-container">
-                                                                        @foreach($son['son'] as $children)
-                                                                            <div class="sh-menu-list-link"><a href="{{$children['url']}}">{{$children['title']}}</a></div>
-                                                                        @endforeach
-                                                                    </div>
-                                                                @endif
+                                                    <div class="sh-menu-grid">
+                                                        <div class="sh-menu-list">
+                                                            <header class="sh-menu-list-header">
+                                                                <div class="sh-menu-list-header-title"></div>
+                                                            </header>
+                                                            <div class="sh-menu-list-link-container">
+                                                                @foreach($nav['son'] as $children)
+                                                                    <div class="sh-menu-list-link"><a href="{{$children['url']}}">{{$children['title']}}</a></div>
+                                                                @endforeach
                                                             </div>
                                                         </div>
-                                                    @endforeach
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,7 +130,7 @@
                             @if(!empty($category))
                                 <div class="sh-menu-mob-d1">
                                     <button class="sh-menu-mob-d1-toggle">
-                                        <span>产品</span>
+                                        <span>产品中心</span>
                                         <span class="sh-menu-mob-d1-toggle-arrow"></span>
                                     </button>
                                 </div>
@@ -164,16 +156,12 @@
                                 </button>
                                 <div class="sh-menu-mob-secondary-list">
                                     <div class="sh-menu-mob-d3-container">
-                                        @foreach($category as $cate)
-                                            <div class="sh-menu-mob-d3">
-                                                <header class="sh-menu-mob-d3-header">{{ $cate['name'] }}</header>
-                                                @if(!empty($cate['son']))
-                                                    @foreach($cate['son'] as $children)
-                                                        <a href="/product?category={{ $children['id'] }}" class="sh-menu-mob-d4">{{ $children['name'] }}</a>
-                                                    @endforeach
-                                                @endif
-                                            </div>
-                                        @endforeach
+                                        <div class="sh-menu-mob-d3">
+                                            <header class="sh-menu-mob-d3-header"></header>
+                                            @foreach($category as $cate)
+                                                <a href="/product?category={{ $cate['id'] }}" class="sh-menu-mob-d4">{{ $cate['name'] }}</a>
+                                            @endforeach
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -189,16 +177,12 @@
                                     <div class="sh-menu-mob-secondary-list">
                                         <div class="sh-menu-mob-d3-container">
                                             @if(!empty($nav['son']))
-                                                @foreach($nav['son'] as $son)
-                                                    <div class="sh-menu-mob-d3">
-                                                        <header class="sh-menu-mob-d3-header">{{ $son['title'] }}</header>
-                                                        @if(!empty($son['son']))
-                                                            @foreach($son['son'] as $children)
-                                                                <a href="{{ $children['url'] }}" class="sh-menu-mob-d4">{{ $children['title'] }}</a>
-                                                            @endforeach
-                                                        @endif
-                                                    </div>
-                                                @endforeach
+                                                <div class="sh-menu-mob-d3">
+                                                    <header class="sh-menu-mob-d3-header"></header>
+                                                    @foreach($nav['son'] as $son)
+                                                        <a href="{{ $son['url'] }}" class="sh-menu-mob-d4">{{ $son['title'] }}</a>
+                                                    @endforeach
+                                                </div>
                                             @endif
                                         </div>
                                     </div>

@@ -16,7 +16,7 @@ class Controller extends BaseController
     public function __construct()
     {
         //商品分类
-        $category = $this->getTree(Category::all()->toArray());
+        $category = Category::all()->toArray();
         //导航
         $navs = $this->getTree(Nav::all()->toArray());
 

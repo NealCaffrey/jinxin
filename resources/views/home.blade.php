@@ -6,55 +6,47 @@
             <div class="banners">
                 <div class="slidershow">
                     <ul class="sliders">
-                        <li class="slider" style="opacity: 1"><img src="/images/bg1.jpg" width="100%" height="100%"></li>
-                        <li class="slider" style="opacity: 0"><img src="/images/bg2.jpg" width="100%" height="100%"></li>
-                        <li class="slider" style="opacity: 0"><img src="/images/bg3.jpg" width="100%" height="100%"></li>
-                        <li class="slider" style="opacity: 0"><img src="/images/bg4.jpg" width="100%" height="100%"></li>
+                        @if(!empty($slides))
+                            @foreach($slides as $k => $slide)
+                                @if($k == 0)
+                                    <li class="slider" style="opacity: 1;background-image: url('/uploads/{{ $slide['image'] }}')"></li>
+                                @else
+                                    <li class="slider" style="opacity: 0;background-image: url('/uploads/{{ $slide['image'] }}')"></li>
+                                @endif
+                            @endforeach
+                        @endif
                     </ul>
                     <ol class="flex-control-nav">
-                        <li class="banner-icon flex-active"><a href="#">1</a></li>
-                        <li class="banner-icon"><a href="#">2</a></li>
-                        <li class="banner-icon"><a href="#">3</a></li>
-                        <li class="banner-icon"><a href="#">4</a></li>
+                        @if(!empty($slides))
+                            @foreach($slides as $k => $slide)
+                                @if($k == 0)
+                                    <li class="banner-icon flex-active"><a href="#"></a></li>
+                                @else
+                                    <li class="banner-icon"><a href="#"></a></li>
+                                @endif
+                            @endforeach
+                        @endif
                     </ol>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="small">
+        <section class="brand">
+            <div class="container">
                 <div class="row">
-                    <div class="pure col-xs-12 col-sm-6 col-lg-3">
-                        <a href="#" class="index_sb bg1">
-                            <div class="caption">
-                                <div class="caption-title">数据存储</div>
-                                <p class="caption-desc">集中备份服务器、虚拟机、电脑，无需额外费用</p>
-                            </div>
-                        </a>
+                    <div class="col-12">
+                        <h2>产品品牌</h2>
                     </div>
-                    <div class="pure col-xs-12 col-sm-6 col-lg-3">
-                        <a href="#" class="index_sb bg2">
-                            <div class="caption">
-                                <div class="caption-title">群晖一体机</div>
-                                <p class="caption-desc">集中备份服务器、虚拟机、电脑，无需额外费用</p>
+                </div>
+                <div class="row brand-list">
+                    @if(!empty($brands))
+                        @foreach($brands as $brand)
+                            <div class="col-6 col-sm-3 col-lg-3 brand-info">
+                                <a href="/product?brand={{ $brand['id'] }}">
+                                    <img src="/uploads/{{ $brand['image'] }}">
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="pure col-xs-12 col-sm-6 col-lg-3">
-                        <a href="#" class="index_sb bg3">
-                            <div class="caption">
-                                <div class="caption-title">群晖一体机</div>
-                                <p class="caption-desc">集中备份服务器、虚拟机、电脑，无需额外费用</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="pure col-xs-12 col-sm-6 col-lg-3">
-                        <a href="#" class="index_sb bg4">
-                            <div class="caption">
-                                <div class="caption-title">群晖一体机</div>
-                                <p class="caption-desc">集中备份服务器、虚拟机、电脑，无需额外费用</p>
-                            </div>
-                        </a>
-                    </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </section>

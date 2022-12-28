@@ -36,6 +36,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection password
      * @property Grid\Column|Collection avatar
      * @property Grid\Column|Collection remember_token
+     * @property Grid\Column|Collection category_id
      * @property Grid\Column|Collection deleted_at
      * @property Grid\Column|Collection image
      * @property Grid\Column|Collection uuid
@@ -52,7 +53,9 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection tokenable_id
      * @property Grid\Column|Collection abilities
      * @property Grid\Column|Collection last_used_at
+     * @property Grid\Column|Collection brand_id
      * @property Grid\Column|Collection attribute
+     * @property Grid\Column|Collection orders
      * @property Grid\Column|Collection email_verified_at
      *
      * @method Grid\Column|Collection id(string $label = null)
@@ -80,6 +83,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection password(string $label = null)
      * @method Grid\Column|Collection avatar(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
+     * @method Grid\Column|Collection category_id(string $label = null)
      * @method Grid\Column|Collection deleted_at(string $label = null)
      * @method Grid\Column|Collection image(string $label = null)
      * @method Grid\Column|Collection uuid(string $label = null)
@@ -96,7 +100,9 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection tokenable_id(string $label = null)
      * @method Grid\Column|Collection abilities(string $label = null)
      * @method Grid\Column|Collection last_used_at(string $label = null)
+     * @method Grid\Column|Collection brand_id(string $label = null)
      * @method Grid\Column|Collection attribute(string $label = null)
+     * @method Grid\Column|Collection orders(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
      */
     class Grid {}
@@ -129,6 +135,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection password
      * @property Show\Field|Collection avatar
      * @property Show\Field|Collection remember_token
+     * @property Show\Field|Collection category_id
      * @property Show\Field|Collection deleted_at
      * @property Show\Field|Collection image
      * @property Show\Field|Collection uuid
@@ -145,7 +152,9 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection tokenable_id
      * @property Show\Field|Collection abilities
      * @property Show\Field|Collection last_used_at
+     * @property Show\Field|Collection brand_id
      * @property Show\Field|Collection attribute
+     * @property Show\Field|Collection orders
      * @property Show\Field|Collection email_verified_at
      *
      * @method Show\Field|Collection id(string $label = null)
@@ -173,6 +182,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection password(string $label = null)
      * @method Show\Field|Collection avatar(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
+     * @method Show\Field|Collection category_id(string $label = null)
      * @method Show\Field|Collection deleted_at(string $label = null)
      * @method Show\Field|Collection image(string $label = null)
      * @method Show\Field|Collection uuid(string $label = null)
@@ -189,7 +199,9 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection tokenable_id(string $label = null)
      * @method Show\Field|Collection abilities(string $label = null)
      * @method Show\Field|Collection last_used_at(string $label = null)
+     * @method Show\Field|Collection brand_id(string $label = null)
      * @method Show\Field|Collection attribute(string $label = null)
+     * @method Show\Field|Collection orders(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
      */
     class Show {}

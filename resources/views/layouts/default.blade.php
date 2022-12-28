@@ -82,6 +82,20 @@
             } else {
                 $(this).prev().prop("checked", false)
             }
+
+
+            setTimeout(function () {
+                //先行遍历值
+                var category = [];
+                var brand = [];
+                $('.options input[name="category_id"]:checked').each(function (index, item) {
+                    category.push($(item).val());
+                });
+                $('input[name="brand_id"]:checked').each(function (index, item) {
+                    brand.push($(this).val());
+                });
+                window.location.href = '/product?category=' + category.join(',') + '&brand=' + brand.join(',');
+            }, 100);
         });
         $('#filter-product').click(function () {
             //先行遍历值
