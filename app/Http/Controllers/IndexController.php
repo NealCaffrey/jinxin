@@ -18,9 +18,17 @@ class IndexController extends Controller
     {
         $slides = Slide::orderByDesc('orders')->get()->toArray();
         $brands = Brand::orderByDesc('order')->get()->toArray();
+        $news = News::orderByDesc('created_at')->limit(3)->get()->toArray();
+
+        if (!empty($news)) {
+            foreach ($news as $k => $v) {
+                $news[$k]['content'] = strip_tags($v['content']);
+            }
+        }
 
         view()->share('slides', $slides);
         view()->share('brands', $brands);
+        view()->share('news', $news);
         return view('home');
     }
 

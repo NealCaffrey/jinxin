@@ -127,6 +127,10 @@
             $('.sliders').children('.slider').css('opacity', 0);
             $('.sliders').children('.slider').eq($(this).index()).css('opacity', 1);
         });
+        $('.news-info').hover(function () {
+            $(this).siblings().removeClass('news-active');
+            $(this).addClass('news-active');
+        });
     });
 </script>
 </html>
