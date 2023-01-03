@@ -11829,12 +11829,16 @@ textarea.form-control-lg {
 }
 #support .support-list {
   padding-bottom: 40px;
+  text-align: center;
 }
 #support .support-list div {
   margin-bottom: 30px;
 }
 #support .support-list a {
   text-decoration: none;
+}
+#support .support-list img {
+  width: 100%;
 }
 #support .support-box {
   min-height: 125px;
@@ -12101,7 +12105,8 @@ textarea.form-control-lg {
   justify-content: center;
 }
 #product .product-box .img a img {
-  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
 }
 #product .product-box .intro {
   padding-left: 12px;

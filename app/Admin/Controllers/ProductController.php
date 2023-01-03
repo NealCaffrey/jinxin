@@ -46,7 +46,7 @@ class ProductController extends AdminController
                 ->options('/api/brand_list');
 
             $form->text('name');
-            $form->image('image')->uniqueName()->autoUpload();
+            $form->image('image')->uniqueName()->autoUpload()->rules('required');
             $form->embeds('attribute', '属性', function ($form) {
                 $attribute = Attribute::all();
                 //属性字段
@@ -59,7 +59,7 @@ class ProductController extends AdminController
                 return json_encode($v);
             });
 
-            $form->editor('content');
+            $form->editor('content')->rules('required');
             $form->disableHeader();
             $form->footer(function ($footer) {
                 $footer->disableViewCheck();

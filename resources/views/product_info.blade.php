@@ -5,11 +5,11 @@
         <div class="container">
             <div class="row" style="padding-bottom: 20px;">
                 <div class="col-12 col-lg-6">
-                    <h1>DiskStation® DS118</h1>
+                    <h1>{{ $info['name'] }}</h1>
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="product-title-img">
-                        <img src="/uploads/{{ $info->image }}">
+{{--                        <img src="/uploads/{{ $info->image }}">--}}
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                     <div class="choose">
                         <ul>
                             <li class="choose-item active">
-                                <a href="#" data-attr="product-content">特色</a>
+                                <a href="#" data-attr="product-content">详情</a>
                             </li>
                             <li class="choose-item">
                                 <a href="#" data-attr="product-attribute">规格</a>

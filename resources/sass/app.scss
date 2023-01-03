@@ -1050,11 +1050,15 @@
     }
     .support-list {
         padding-bottom: 40px;
+        text-align: center;
         div {
             margin-bottom: 30px;
         }
         a {
             text-decoration: none;
+        }
+        img {
+            width: 100%;
         }
     }
     .support-box {
@@ -1327,7 +1331,9 @@
                 display: flex;
                 justify-content: center;
                 img {
-                    width: 100%;
+                    //width: 100%;
+                    max-width: 250px;
+                    max-height: 250px;
                 }
             }
         }

@@ -21,9 +21,6 @@ class AttributeController extends AdminController
     {
         return Grid::make(new Attribute(), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('category_id', '属性分类')->display(function ($categoryId) {
-                return AttributeCategory::find($categoryId)->name;
-            });
             $grid->column('name');
             $grid->column('order')->sortable();
 
@@ -40,7 +37,6 @@ class AttributeController extends AdminController
     protected function form()
     {
         return Form::make(new Attribute(), function (Form $form) {
-            $form->select('category_id')->options('/api/attribute_category')->rules('required');
             $form->text('name')->rules('required');
             $form->text('order')->rules('int')->default(0);
 
