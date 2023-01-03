@@ -23,9 +23,9 @@ Route::group([
     $router->resource('product', 'ProductController');
     $router->resource('slide', 'SlideController');
 
-    $router->get('/api/nav_tree', 'commonController@getNavTree');
-    $router->get('/api/category_list', 'commonController@getCategoryList');
-    $router->get('/api/attribute_category', 'commonController@getAttributeCategory');
-    $router->get('/api/category_list_2', 'commonController@getCategoryListTwo');
-    $router->get('/api/brand_list', 'commonController@getBrandList');
+    $router->get('/api/nav_tree', 'CommonController@getNavTree');
+    $router->get('/api/category_list', 'CommonController@getCategoryList');
+    $router->get('/api/attribute_category', 'CommonController@getAttributeCategory');
+    $router->get('/api/category_list_2', 'CommonController@getCategoryListTwo');
+    $router->get('/api/brand_list', 'CommonController@getBrandList');
 });
