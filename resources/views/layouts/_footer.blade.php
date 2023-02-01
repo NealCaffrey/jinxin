@@ -43,9 +43,9 @@
                                 <span class="btn-toggle-x"></span>
                             </div>
                             <ul class="footer-menu-item">
-                                <li><a href="/about"><span>公司介绍</span></a></li>
-                                <li><a href="/case"><span>客户案例</span></a></li>
-                                <li><a href="/location"><span>公司地址</span></a></li>
+                                <li><a href="/about.html"><span>公司介绍</span></a></li>
+                                <li><a href="/case.html"><span>客户案例</span></a></li>
+                                <li><a href="/location.html"><span>公司地址</span></a></li>
                             </ul>
                         </div>
                         <div class="footer-menu col-lg-3">
@@ -56,7 +56,7 @@
                             @if(!empty($category))
                             <ul class="footer-menu-item">
                                 @foreach($category as $cate)
-                                    <li><a href="/product?category={{ $cate['id'] }}"><span>{{ $cate['name'] }}</span></a></li>
+                                    <li><a href="/product.html?category={{ $cate['id'] }}"><span>{{ $cate['name'] }}</span></a></li>
                                 @endforeach
                             </ul>
                             @endif
@@ -67,9 +67,9 @@
                                 <span class="btn-toggle-x"></span>
                             </div>
                             <ul class="footer-menu-item">
-                                <li><a href="/solution/cloud"><span>云计算解决方案</span></a></li>
-                                <li><a href="/solution/performance"><span>高性能解决方案</span></a></li>
-                                <li><a href="/solution/bigdata"><span>大数据解决方案</span></a></li>
+                                <li><a href="/solution/cloud.html"><span>云计算解决方案</span></a></li>
+                                <li><a href="/solution/performance.html"><span>高性能解决方案</span></a></li>
+                                <li><a href="/solution/bigdata.html"><span>大数据解决方案</span></a></li>
                             </ul>
                         </div>
                         <div class="footer-menu col-lg-3">
@@ -78,7 +78,7 @@
                                 <span class="btn-toggle-x"></span>
                             </div>
                             <ul class="footer-menu-item">
-                                <li><a href="/support"><span>技术支持</span></a></li>
+                                <li><a href="/support.html"><span>技术支持</span></a></li>
                             </ul>
                         </div>
                     </div>

@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row news-header">
                 <div class="col-12">
-                    <a href="/news"><span>返回新闻中心</span></a>
+                    <a href="/news.html"><span>返回新闻中心</span></a>
                 </div>
             </div>
             @if(!empty($data))

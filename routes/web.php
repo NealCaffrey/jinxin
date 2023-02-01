@@ -18,18 +18,18 @@ use App\Http\Controllers\CaseController;
 */
 
 Route::get('/', [IndexController::class, 'index']);//首页
-Route::get('/solution/{type}', [IndexController::class, 'solution']);//解决方案
-Route::get('/support', [IndexController::class, 'support']);//支持
-Route::get('/search', [IndexController::class, 'search']);//搜索
-Route::get('/about', [IndexController::class, 'about']);//关于我们
-Route::get('/location', [IndexController::class, 'location']);//公司地址
+Route::get('/solution/{type}.html', [IndexController::class, 'solution']);//解决方案
+Route::get('/support.html', [IndexController::class, 'support']);//支持
+Route::get('/search.html', [IndexController::class, 'search']);//搜索
+Route::get('/about.html', [IndexController::class, 'about']);//关于我们
+Route::get('/location.html', [IndexController::class, 'location']);//公司地址
 //产品
-Route::get('/product', [ProductController::class, 'index']);
-Route::get('/product/{id}', [ProductController::class, 'info']);
+Route::get('/product.html', [ProductController::class, 'index']);
+Route::get('/product/{id}.html', [ProductController::class, 'info']);
 //案例
-Route::get('/case', [CaseController::class, 'index']);
-Route::get('/case/{id}', [CaseController::class, 'info']);
+Route::get('/case.html', [CaseController::class, 'index']);
+//Route::get('/case/{id}', [CaseController::class, 'info']);
 //新闻
-Route::get('/news', [NewsController::class, 'index']);
-Route::get('/news/{id}', [NewsController::class, 'info']);
+Route::get('/news.html', [NewsController::class, 'index']);
+Route::get('/news/{id}.html', [NewsController::class, 'info']);
 

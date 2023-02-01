@@ -58,17 +58,17 @@
         });
         //搜索
         $('#search-button').click(function () {
-            window.location.href = "http://jinxin.test/search?keyword=" + $('#header-search-input').val();
+            window.location.href = "http://jinxin.test/search.html?keyword=" + $('#header-search-input').val();
         });
         $('#search-submit').submit(function () {
-            window.location.href = "http://jinxin.test/search?keyword=" + $('#header-search-input').val();
+            window.location.href = "http://jinxin.test/search.html?keyword=" + $('#header-search-input').val();
         });
         $('#search-submit-sm').submit(function () {
-            window.location.href = "http://jinxin.test/search?keyword=" + $('#header-search-input-sm').val();
+            window.location.href = "http://jinxin.test/search.html?keyword=" + $('#header-search-input-sm').val();
         });
         //搜索结果
         $('#search-result-submit').click(function () {
-            window.location.href = "http://jinxin.test/search?keyword=" + $('#search-keyword').val();
+            window.location.href = "http://jinxin.test/search.html?keyword=" + $('#search-keyword').val();
         });
         //产品筛选
         $('.btn-collapse').click(function () {
@@ -94,7 +94,7 @@
                 $('input[name="brand_id"]:checked').each(function (index, item) {
                     brand.push($(this).val());
                 });
-                window.location.href = '/product?category=' + category.join(',') + '&brand=' + brand.join(',');
+                window.location.href = '/product.html?category=' + category.join(',') + '&brand=' + brand.join(',');
             }, 100);
         });
         $('#filter-product').click(function () {
@@ -107,7 +107,7 @@
             $('input[name="brand_id"]:checked').each(function (index, item) {
                 brand.push($(this).val());
             });
-            window.location.href = '/product?category=' + category.join(',') + '&brand=' + brand.join(',');
+            window.location.href = '/product.html?category=' + category.join(',') + '&brand=' + brand.join(',');
         });
         $('.footer-menu').click(function () {
             $(this).children('.title').children('.btn-toggle-x').toggleClass('rotate');
@@ -124,12 +124,17 @@
             $(this).siblings().removeClass('flex-active');
             $(this).addClass('flex-active');
 
-            $('.sliders').children('.slider').css('opacity', 0);
-            $('.sliders').children('.slider').eq($(this).index()).css('opacity', 1);
+            $('.sliders').children('.slider').hide();
+            $('.sliders').children('.slider').eq($(this).index()).show();
         });
         $('.news-info').hover(function () {
             $(this).siblings().removeClass('news-active');
             $(this).addClass('news-active');
+        });
+        //滑动图
+        $('.slider').click(function () {
+            var url = $(this).attr('data-url');
+            window.location.href = url;
         });
     });
 </script>

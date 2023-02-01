@@ -9,9 +9,9 @@
                         @if(!empty($slides))
                             @foreach($slides as $k => $slide)
                                 @if($k == 0)
-                                    <li class="slider" style="opacity: 1;background-image: url('/uploads/{{ $slide['image'] }}')"></li>
+                                    <li class="slider" data-url="{{ $slide['url'] }}" style="background-image: url('/uploads/{{ $slide['image'] }}')"></li>
                                 @else
-                                    <li class="slider" style="opacity: 0;background-image: url('/uploads/{{ $slide['image'] }}')"></li>
+                                    <li class="slider" data-url="{{ $slide['url'] }}" style="display: none;background-image: url('/uploads/{{ $slide['image'] }}')"></li>
                                 @endif
                             @endforeach
                         @endif
@@ -40,7 +40,7 @@
                 <div class="row business-list">
                     <div class="col-4">
                         <div class="business-info">
-                            <a href="/product?category=1">
+                            <a href="/product.html?category=1">
                                 <div class="business-img img1"></div>
                             </a>
                         </div>
@@ -51,7 +51,7 @@
 
                     <div class="col-4">
                         <div class="business-info">
-                            <a href="/product?category=1">
+                            <a href="/product.html?category=2">
                                 <div class="business-img img2"></div>
                             </a>
                         </div>
@@ -62,12 +62,12 @@
 
                     <div class="col-4">
                         <div class="business-info">
-                            <a href="/product?category=1">
+                            <a href="/product.html?category=12">
                                 <div class="business-img img3"></div>
                             </a>
                         </div>
                         <div class="business-title">
-                            <h2>防火墙</h2>
+                            <h2>存储</h2>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                     @if(!empty($brands))
                         @foreach($brands as $brand)
                             <div class="col-6 col-sm-3 col-lg-3 brand-info">
-                                <a href="/product?brand={{ $brand['id'] }}">
+                                <a href="/product.html?brand={{ $brand['id'] }}">
                                     <img src="/uploads/{{ $brand['image'] }}">
                                 </a>
                             </div>
@@ -100,7 +100,7 @@
                         <h2>新闻中心</h2>
                     </div>
                     <div class="col-3">
-                        <a href="/news" class="news-more">更多></a>
+                        <a href="/news.html" class="news-more">更多></a>
                     </div>
                 </div>
                 <div class="row">
@@ -116,10 +116,10 @@
                                             <h2 class="news-sort">0{{ $k + 1 }}</h2>
                                         </div>
                                         <div class="col-9">
-                                            <a href="/news/{{ $newsInfo['id'] }}">
+                                            <a href="/news/{{ $newsInfo['id'] }}.html">
                                                 <div class="news-tit">{{ $newsInfo['title'] }}</div>
                                             </a>
-                                            <a href="/news/{{ $newsInfo['id'] }}">
+                                            <a href="/news/{{ $newsInfo['id'] }}.html">
                                                 <p class="news-content">{{ $newsInfo['content'] }}</p>
                                             </a>
                                             <p class="news-time">{{ $newsInfo['created_at'] }}</p>

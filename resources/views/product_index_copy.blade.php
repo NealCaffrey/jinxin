@@ -19,12 +19,12 @@
                         @foreach($list as $info)
                             <div class="product-box">
                                 <div class="img">
-                                    <a href="/product/{{ $info->id }}">
+                                    <a href="/product/{{ $info->id }}.html">
                                         <img src="/uploads/{{ $info->image }}">
                                     </a>
                                 </div>
                                 <div class="intro">
-                                    <a href="/product/{{ $info->id }}">
+                                    <a href="/product/{{ $info->id }}.html">
                                         <h4>{{ $info->name }}</h4>
                                     </a>
                                 </div>

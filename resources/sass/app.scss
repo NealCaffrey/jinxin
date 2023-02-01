@@ -101,7 +101,7 @@
                                 .sh-menu-grid {
                                     display: flex;
                                     flex-direction: column;
-                                    width: 290px;
+                                    width: 200px;
                                     padding: 24px;
                                     .sh-menu-list {
                                         border-bottom: 0;
@@ -122,6 +122,7 @@
                                             }
                                         }
                                         .sh-menu-list-link-container {
+                                            margin-top: 8px;
                                             .sh-menu-list-link{
                                                 color: #000;
                                                 margin: 6px 0;
@@ -462,6 +463,7 @@
                 transition: opacity 0.5s;
                 background-repeat: no-repeat;
                 background-size: cover;
+                cursor: pointer;
                 img {
                     width: 100%;
                     height: 100%;

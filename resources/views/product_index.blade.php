@@ -23,16 +23,17 @@
                         </div>
                     </div>
                     <div class="product-filter-group">
-                        <div class="group @if(!empty($categoryId)) group-active @endif">
+                        <div class="group group-active">
                             <h3 class="btn-collapse">
                                 <span class="flex1">所属分类</span>
                                 <span class="btn-toggle"></span>
                             </h3>
-                            <div class="options" @if(empty($categoryId)) style="display: none" @endif">
+{{--                            style="display: none"--}}
+                            <div class="options">
                                 @if(!empty($categoryList))
                                     @foreach($categoryList as $cate)
                                         <label class="checkbox">
-                                            <input type="checkbox" name="category_id" style="display: none"  value="{{ $cate->id }}" @if(in_array($cate->id, $categoryId)) checked="true" @endif>
+                                            <input type="radio" name="category_id" style="display: none"  value="{{ $cate->id }}" @if(in_array($cate->id, $categoryId)) checked="true" @endif>
                                             <span class="checkbox-icon @if(in_array($cate->id, $categoryId)) checkbox-icon-active @endif"></span>
                                             <span class="align-fix">{{ $cate->name }}</span>
                                         </label>
@@ -41,16 +42,16 @@
                             </div>
                         </div>
 
-                        <div class="group @if(!empty($brandId)) group-active @endif">
+                        <div class="group group-active">
                             <h3 class="btn-collapse">
                                 <span class="flex1">品牌</span>
                                 <span class="btn-toggle"></span>
                             </h3>
-                            <div class="options"  @if(empty($brandId)) style="display: none" @endif>
+                            <div class="options">
                                 @if(!empty($brand))
                                     @foreach($brand as $br)
                                         <label class="checkbox">
-                                            <input type="checkbox" name="brand_id" style="display: none" value="{{ $br->id }}" @if(in_array($br->id, $brandId)) checked="true" @endif>
+                                            <input type="radio" name="brand_id" style="display: none" value="{{ $br->id }}" @if(in_array($br->id, $brandId)) checked="true" @endif>
                                             <span class="checkbox-icon @if(in_array($br->id, $brandId)) checkbox-icon-active @endif"></span>
                                             <span class="align-fix">{{ $br->name }}</span>
                                         </label>
@@ -69,12 +70,12 @@
                                     <div class="col-12 col-sm-6 col-md-6 col-lg-4 product-list">
                                         <div class="product-box">
                                             <div class="img">
-                                                <a href="/product/{{ $info->id }}">
+                                                <a href="/product/{{ $info->id }}.html">
                                                     <img src="/uploads/{{ $info->image }}">
                                                 </a>
                                             </div>
                                             <div class="intro">
-                                                <a href="/product/{{ $info->id }}">
+                                                <a href="/product/{{ $info->id }}.html">
                                                     <h4>{{ $info->name }}</h4>
                                                 </a>
                                             </div>

@@ -10920,7 +10920,7 @@ textarea.form-control-lg {
 .header-container .sh-nav-wrapper .sh-nav .sh-nav-links .sh-nav-link .sh-nav-link-wrapper .sh-menu .sh-menu-grid-container .sh-menu-grid {
   display: flex;
   flex-direction: column;
-  width: 290px;
+  width: 200px;
   padding: 24px;
 }
 .header-container .sh-nav-wrapper .sh-nav .sh-nav-links .sh-nav-link .sh-nav-link-wrapper .sh-menu .sh-menu-grid-container .sh-menu-grid .sh-menu-list {
@@ -10941,6 +10941,9 @@ textarea.form-control-lg {
   line-height: 24px;
   color: #000;
   transition: 0.15s ease-in-out;
+}
+.header-container .sh-nav-wrapper .sh-nav .sh-nav-links .sh-nav-link .sh-nav-link-wrapper .sh-menu .sh-menu-grid-container .sh-menu-grid .sh-menu-list .sh-menu-list-link-container {
+  margin-top: 8px;
 }
 .header-container .sh-nav-wrapper .sh-nav .sh-nav-links .sh-nav-link .sh-nav-link-wrapper .sh-menu .sh-menu-grid-container .sh-menu-grid .sh-menu-list .sh-menu-list-link-container .sh-menu-list-link {
   color: #000;
@@ -11267,6 +11270,7 @@ textarea.form-control-lg {
   transition: opacity 0.5s;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 #home .slidershow .sliders .slider img {
   width: 100%;

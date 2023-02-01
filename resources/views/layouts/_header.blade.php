@@ -19,11 +19,24 @@
                                             <div class="sh-menu-grid">
                                                 <div class="sh-menu-list">
                                                     <header class="sh-menu-list-header">
-                                                        <div class="sh-menu-list-header-title"></div>
+                                                        <div class="sh-menu-list-header-title">分类</div>
                                                     </header>
                                                     @foreach($category as $cate)
                                                         <div class="sh-menu-list-link-container">
-                                                            <div class="sh-menu-list-link"><a href="/product?category={{$cate['id']}}">{{$cate['name']}}</a></div>
+                                                            <div class="sh-menu-list-link"><a href="/product.html?category={{$cate['id']}}">{{$cate['name']}}</a></div>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+
+                                            <div class="sh-menu-grid">
+                                                <div class="sh-menu-list">
+                                                    <header class="sh-menu-list-header">
+                                                        <div class="sh-menu-list-header-title">品牌</div>
+                                                    </header>
+                                                    @foreach($brands as $brand)
+                                                        <div class="sh-menu-list-link-container">
+                                                            <div class="sh-menu-list-link"><a href="/product.html?brand={{$brand['id']}}">{{$brand['name']}}</a></div>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -73,7 +86,7 @@
                     </a>
                     <div class="sh-service-search-sm">
                         <div class="sh-search">
-                            <a href="/search" class="sh-search-form" id="search-button-sm">
+                            <a href="/search.html" class="sh-search-form" id="search-button-sm">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 17 17">
                                     <circle cx="7" cy="7" r="6.5" stroke="#fff"></circle>
                                     <path fill="#fff" d="M12.086 11.379H18.086V12.379H12.086z" transform="rotate(45 12.086 11.379)"></path>
@@ -84,7 +97,7 @@
                     <div class="sh-service-search">
                         <div class="sh-search">
                             <div class="sh-search-form">
-                                <form id="search-submit" action="/search">
+                                <form id="search-submit" action="/search.html">
                                     <button type="button" role="button" aria-label="搜索" class="icon-pos-search" id="search-button">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 17 17">
                                             <circle cx="7" cy="7" r="6.5" stroke="#fff"></circle>
@@ -159,7 +172,7 @@
                                         <div class="sh-menu-mob-d3">
                                             <header class="sh-menu-mob-d3-header"></header>
                                             @foreach($category as $cate)
-                                                <a href="/product?category={{ $cate['id'] }}" class="sh-menu-mob-d4">{{ $cate['name'] }}</a>
+                                                <a href="/product.html?category={{ $cate['id'] }}" class="sh-menu-mob-d4">{{ $cate['name'] }}</a>
                                             @endforeach
                                         </div>
                                     </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Nav;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -17,10 +18,13 @@ class Controller extends BaseController
     {
         //商品分类
         $category = Category::all()->toArray();
+        //品牌
+        $brands = Brand::all()->toArray();
         //导航
         $navs = $this->getTree(Nav::all()->toArray());
 
         view()->share('category', $category);
+        view()->share('brands', $brands);
         view()->share('navs', $navs);
     }
 

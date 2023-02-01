@@ -18,7 +18,7 @@
                             <div class="row">
                                 <div class="col-lg-2">{{$info['created_at']}}</div>
                                 <div class="col-lg-10">
-                                    <a href="/news/{{$info['id']}}">{{$info['title']}}</a>
+                                    <a href="/news/{{$info['id']}}.html">{{$info['title']}}</a>
                                 </div>
                             </div>
                         </div>

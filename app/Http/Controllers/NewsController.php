@@ -8,8 +8,14 @@ class NewsController extends Controller
 {
     public function index()
     {
+        $dataList = News::all()->sortByDesc('id')->toArray();
+        foreach ($dataList as $k => $data)
+        {
+            $dataList[$k]['created_at'] = date('Y-m-d', strtotime($data['created_at']));
+        }
+
         return view('news_index', [
-            'data' => News::all()->sortByDesc('id')->toArray()
+            'data' => $dataList
         ]);
     }
 

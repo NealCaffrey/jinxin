@@ -64,11 +64,13 @@ class IndexController extends Controller
         $data = [];
         $keyword = $request->input('keyword');
         if (!empty($keyword)) {
-            $newsList = DB::table('news')->where('content', 'like', "%{$keyword}%")->get()->toArray();
-            foreach ($newsList as $news)
+            $newsList = News::where('content', 'like', "%{$keyword}%")->get()->toArray();
+
+            foreach ($newsList as $k => $news)
             {
-                $news->url = '/news/' . $news->id;
+                $newsList[$k]['url'] = '/news/' . $news['id'] . '.html';
             }
+
             $data = array_merge($data, $newsList);
         }
 

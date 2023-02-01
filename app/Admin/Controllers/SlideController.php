@@ -20,6 +20,7 @@ class SlideController extends AdminController
         return Grid::make(new Slide(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('image')->image('', 100, 100);
+            $grid->column('url');
             $grid->column('orders')->sortable();
 
 
@@ -41,6 +42,7 @@ class SlideController extends AdminController
         return Form::make(new Slide(), function (Form $form) {
             $form->display('id');
             $form->image('image')->uniqueName()->autoUpload();
+            $form->text('url')->rules('required');
             $form->text('orders')->rules('int')->default(10);
 
             $form->disableHeader();
