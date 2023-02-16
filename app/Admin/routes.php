@@ -22,10 +22,14 @@ Route::group([
     $router->resource('attribute', 'AttributeController');
     $router->resource('product', 'ProductController');
     $router->resource('slide', 'SlideController');
+    $router->resource('business', 'BusinessController');
+    $router->resource('appearance', 'AppearanceController');
+    $router->resource('solution', 'SolutionController');
 
     $router->get('/api/nav_tree', 'CommonController@getNavTree');
     $router->get('/api/category_list', 'CommonController@getCategoryList');
     $router->get('/api/attribute_category', 'CommonController@getAttributeCategory');
     $router->get('/api/category_list_2', 'CommonController@getCategoryListTwo');
     $router->get('/api/brand_list', 'CommonController@getBrandList');
+    $router->get('/api/appearance_list', 'CommonController@getAppearanceList');
 });

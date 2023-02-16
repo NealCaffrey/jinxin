@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Example;
 use App\Models\News;
+use App\Models\Product;
 use App\Models\Slide;
+use App\Models\Solution;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -35,17 +37,28 @@ class IndexController extends Controller
     /**
      * 解决方案
      */
-    public function solution($type)
+    public function solution()
     {
-        /**
-         * 解决方案类型判断
-         * 如果需要新增页面，需要在这儿添加
-         */
-        if (!in_array($type, ['bigdata', 'cloud', 'performance'])) {
-            return redirect('/');
+        $solutions = Solution::getList();
+        foreach ($solutions as $k => $data)
+        {
+            $solutions[$k]['created_at'] = date('Y-m-d', strtotime($data['created_at']));
         }
 
-        return view('solution_' . $type);
+        view()->share('solutions', $solutions);
+        return view('solution_index');
+    }
+
+    public function solutionInfo($id)
+    {
+        $data = Solution::find($id);
+        if (empty($data)) {
+            return redirect('/solution.html');
+        }
+
+        return view('solution_info', [
+            'data' => $data->toArray()
+        ]);
     }
 
     /**
@@ -64,14 +77,11 @@ class IndexController extends Controller
         $data = [];
         $keyword = $request->input('keyword');
         if (!empty($keyword)) {
-            $newsList = News::where('content', 'like', "%{$keyword}%")->get()->toArray();
-
-            foreach ($newsList as $k => $news)
+            $data = Product::where('name', 'like', "%{$keyword}%")->paginate(12);
+            foreach ($data as $k => $news)
             {
-                $newsList[$k]['url'] = '/news/' . $news['id'] . '.html';
+                $data[$k]['url'] = '/product/' . $news['id'] . '.html';
             }
-
-            $data = array_merge($data, $newsList);
         }
 
         return view('search', [

@@ -45,8 +45,13 @@ class ProductController extends AdminController
             $form->select('brand_id')
                 ->options('/api/brand_list');
 
+            $form->select('appearance_id')
+                ->options('/api/appearance_list');
+
             $form->text('name');
             $form->image('image')->uniqueName()->autoUpload()->rules('required');
+            $form->multipleImage('slide');
+
             $form->embeds('attribute', '属性', function ($form) {
                 $attribute = Attribute::all();
                 //属性字段
@@ -60,6 +65,8 @@ class ProductController extends AdminController
             });
 
             $form->editor('content')->rules('required');
+            $form->editor('spec')->rules('required');
+
             $form->disableHeader();
             $form->footer(function ($footer) {
                 $footer->disableViewCheck();

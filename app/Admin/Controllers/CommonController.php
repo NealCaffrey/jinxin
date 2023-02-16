@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Appearance;
 use App\Models\AttributeCategory;
 use App\Models\Brand;
 use App\Models\Category;
@@ -58,12 +59,35 @@ class CommonController extends AdminController
      */
     public function getCategoryListTwo()
     {
-        return Category::get(['id', 'parent_id', 'name as text'])->toArray();
+        $data = Category::get(['id', 'parent_id', 'name as text'])->toArray();
+        $result = [];
+        foreach ($data as $k => $v)
+        {
+            if ($v['parent_id'] == 0) {
+                $result[] = $v;
+                unset($data[$k]);
+
+                foreach ($data as $key => $val)
+                {
+                    if ($val['parent_id'] == $v['id']) {
+                        $val['text'] = '---- ' . $val['text'];
+                        $result[] = $val;
+                    }
+                }
+            }
+        }
+
+        return $result;
     }
 
     public function getBrandList()
     {
         return Brand::all(['id', 'name as text']);
+    }
+
+    public function getAppearanceList()
+    {
+        return Appearance::all(['id', 'name as text']);
     }
 
     /**

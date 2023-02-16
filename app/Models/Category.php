@@ -15,4 +15,14 @@ class Category extends Model
     protected $orderColumn = 'order';
     protected $parentColumn = 'parent_id';
 
+    //获取导航分类
+    public static function getNavCategory()
+    {
+        return self::where('parent_id', '=', 0)->get()->toArray();
+    }
+
+    public static function getProductCategory()
+    {
+        return self::get()->toArray();
+    }
 }

@@ -41,6 +41,7 @@ class ExampleController extends AdminController
         return Form::make(new Example(), function (Form $form) {
             $form->text('title');
             $form->image('image', '公司logo')->uniqueName()->autoUpload();
+            $form->editor('content');
             $form->display('created_at');
 
             $form->disableHeader();

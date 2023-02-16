@@ -29,14 +29,18 @@
                                                 </div>
                                             </div>
 
-                                            <div class="sh-menu-grid">
-                                                <div class="sh-menu-list">
+                                            <div class="sh-menu-grid-brand">
+                                                <div class="sh-menu-list-brand">
                                                     <header class="sh-menu-list-header">
                                                         <div class="sh-menu-list-header-title">品牌</div>
                                                     </header>
                                                     @foreach($brands as $brand)
                                                         <div class="sh-menu-list-link-container">
-                                                            <div class="sh-menu-list-link"><a href="/product.html?brand={{$brand['id']}}">{{$brand['name']}}</a></div>
+                                                            <div class="sh-menu-list-link">
+                                                                <a href="/product.html?brand={{ $brand['id'] }}">
+                                                                    <img src="/uploads/{{ $brand['image'] }}">
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     @endforeach
                                                 </div>

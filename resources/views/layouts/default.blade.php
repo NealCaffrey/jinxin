@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    @yield('js')
 </head>
 <body>
     @include('layouts._header')
@@ -88,26 +89,40 @@
                 //先行遍历值
                 var category = [];
                 var brand = [];
+                var appearance = [];
                 $('.options input[name="category_id"]:checked').each(function (index, item) {
                     category.push($(item).val());
                 });
                 $('input[name="brand_id"]:checked').each(function (index, item) {
                     brand.push($(this).val());
                 });
-                window.location.href = '/product.html?category=' + category.join(',') + '&brand=' + brand.join(',');
+                $('input[name="appearance_id"]:checked').each(function (index, item) {
+                    appearance.push($(this).val());
+                });
+
+                window.location.href = '/product.html?category=' + category.join(',')
+                    + '&brand=' + brand.join(',')
+                    + '&appearance=' + appearance.join(',');
             }, 100);
         });
         $('#filter-product').click(function () {
             //先行遍历值
             var category = [];
             var brand = [];
+            var appearance = [];
             $('.options input[name="category_id"]:checked').each(function (index, item) {
                 category.push($(item).val());
             });
             $('input[name="brand_id"]:checked').each(function (index, item) {
                 brand.push($(this).val());
             });
-            window.location.href = '/product.html?category=' + category.join(',') + '&brand=' + brand.join(',');
+            $('input[name="appearance_id"]:checked').each(function (index, item) {
+                appearance.push($(this).val());
+            });
+
+            window.location.href = '/product.html?category=' + category.join(',')
+                + '&brand=' + brand.join(',')
+                + '&appearance=' + appearance.join(',');
         });
         $('.footer-menu').click(function () {
             $(this).children('.title').children('.btn-toggle-x').toggleClass('rotate');
@@ -136,6 +151,20 @@
             var url = $(this).attr('data-url');
             window.location.href = url;
         });
+
+        $('.contact').mouseover(function () {
+            $(this).css('background-color', '#ffffff');
+            $(this).find('.img0').hide();
+            $(this).find('.img1').show();
+            $(this).find('.tips').show();
+        });
+        $('.contact').mouseout(function () {
+            $(this).css('background-color', '#69c')
+            $(this).find('.img0').show();
+            $(this).find('.img1').hide();
+            $(this).find('.tips').hide();
+        });
     });
 </script>
+@yield('script')
 </html>

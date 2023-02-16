@@ -25,28 +25,35 @@
         </div>
 
         <div class="container search-list">
-            @if(!empty($data))
-                @foreach($data as $info)
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="article">
-                                <a href="{{ $info['url'] }}">
-                                    <h4>{{ $info['title'] }}</h4>
-                                </a>
-                                <p></p>
+            <div class="row">
+                @if(!empty($data))
+                    @foreach($data as $info)
+                        <div class="col-6 col-sm-4 col-md-4 col-lg-3 product-list">
+                            <div class="product-box">
+                                <div class="img">
+                                    <a href="{{ $info['url'] }}">
+                                        <img src="/uploads/{{ $info['image'] }}">
+                                    </a>
+                                </div>
+                                <div class="intro">
+                                    <a href="{{ $info['url'] }}">
+                                        <span>{{ $info['name'] }}</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                    @endforeach
+                    <div>
+                        {{ $data->links() }}
                     </div>
-                @endforeach
-            @elseif(!empty($keyword))
-                <div class="row">
+                @elseif(!empty($keyword))
                     <div class="col-12">
                         <div class="search-result-null">
                             <h2>没有与您的搜索匹配的内容。</h2>
                         </div>
                     </div>
-                </div>
-            @endif
+                @endif
+            </div>
         </div>
     </div>
 @stop

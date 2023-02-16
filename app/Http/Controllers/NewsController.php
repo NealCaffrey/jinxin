@@ -21,8 +21,13 @@ class NewsController extends Controller
 
     public function info($id)
     {
+        $data = News::find($id);
+        if (empty($data)) {
+            return redirect('/news.html');
+        }
+
         return view('news_info', [
-            'data' => News::find($id)->toArray()
+            'data' => $data->toArray()
         ]);
     }
 }

@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Business;
 use App\Models\Category;
 use App\Models\Nav;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\DB;
 
 class Controller extends BaseController
 {
@@ -17,28 +19,17 @@ class Controller extends BaseController
     public function __construct()
     {
         //商品分类
-        $category = Category::all()->toArray();
+        $category = Category::getNavCategory();
         //品牌
-        $brands = Brand::all()->toArray();
+        $brands = Brand::getNavBrand();
         //导航
-        $navs = $this->getTree(Nav::all()->toArray());
+        $navs = getTree(Nav::all()->toArray());
+        //业务
+        $business = Business::getHomeBusiness();
 
         view()->share('category', $category);
         view()->share('brands', $brands);
         view()->share('navs', $navs);
-    }
-
-    function getTree($list)
-    {
-        $tree = [];
-        $list = array_column($list, null, 'id');
-        foreach ($list as $k => $row) {
-            if (isset($list[$row['parent_id']])) {
-                $list[$row['parent_id']]['son'][] = &$list[$k];
-            } else {
-                $tree[] = &$list[$k];
-            }
-        }
-        return $tree;
+        view()->share('business', $business);
     }
 }

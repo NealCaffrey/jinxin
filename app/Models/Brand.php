@@ -12,5 +12,9 @@ class Brand extends Model
     use SoftDeletes;
 
     protected $table = 'brand';
-    
+
+    public static function getNavBrand()
+    {
+        return self::get()->toArray();
+    }
 }

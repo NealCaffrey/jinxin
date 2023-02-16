@@ -18,7 +18,7 @@
                     @if(!empty($data))
                         @foreach($data as $info)
                             <div class="col-lg-4 col-md-6 col-12">
-                                <a href="#">
+                                <a href="/case/{{ $info['id'] }}.html">
                                     <div class="logo">
                                         <img src="/uploads/{{$info['image']}}">
                                     </div>

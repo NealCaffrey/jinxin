@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        {{$data['content']}}
+                        {!! $data['content'] !!}
                     </div>
                 </div>
             </div>
