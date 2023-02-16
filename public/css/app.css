@@ -12079,6 +12079,9 @@ textarea.form-control-lg {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+#search .search-list .product-list .product-box .img {
+  text-align: center;
+}
 #search .search-list .product-list .product-box img {
   width: 150px;
   height: 150px;
