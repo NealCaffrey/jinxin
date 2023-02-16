@@ -5,7 +5,7 @@
                 <nav class="sh-nav">
                     <a href="/">
                         <div class="sh-nav-logo">
-                            <span>金信佳业</span>
+                            <img src="/images/logo.png">
                         </div>
                     </a>
                     <div class="sh-nav-links">

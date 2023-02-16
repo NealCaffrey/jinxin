@@ -11,35 +11,21 @@
         </div>
         <div class="container support-list">
             <div class="row">
-                <div class="col-sm-6 col-lg-3">
-                    <div><img src="/images/dell.jpg"></div>
+                <div class="col-12">
+                    <p>24小时热线电话，为您解决各种技术需求</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
                     <div>
-                        <p>座机：028-61111556</p>
-                        <p>手机：18108034533</p>
+                        <img src="/images/zhuoji.png" style="width: 50px;">
+                        <span class="dianhua">028-61111556</span>
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-lg-3">
-                    <div><img src="/images/lenovo.jpg"></div>
+                <div class="col-12">
                     <div>
-                        <p>座机：028-62522178</p>
-                        <p>手机：13882202586</p>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-lg-3">
-                    <div><img src="/images/hp.jpg"></div>
-                    <div>
-                        <p>座机：028-62522196</p>
-                        <p>手机：17711528469</p>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-lg-3">
-                    <div><img src="/images/huawei.jpg"></div>
-                    <div>
-                        <p>座机：028-62522108</p>
-                        <p>手机：17711526496</p>
+                        <img src="/images/dianhua.png" style="width: 50px;">
+                        <span class="dianhua">18108034533</span>
                     </div>
                 </div>
             </div>

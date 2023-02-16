@@ -61,17 +61,17 @@
                             </ul>
                             @endif
                         </div>
-                        <div class="footer-menu col-lg-3">
-                            <div class="title">
-                                解决方案
-                                <span class="btn-toggle-x"></span>
-                            </div>
-                            <ul class="footer-menu-item">
-                                <li><a href="/solution/cloud.html"><span>云计算解决方案</span></a></li>
-                                <li><a href="/solution/performance.html"><span>高性能解决方案</span></a></li>
-                                <li><a href="/solution/bigdata.html"><span>大数据解决方案</span></a></li>
-                            </ul>
-                        </div>
+{{--                        <div class="footer-menu col-lg-3">--}}
+{{--                            <div class="title">--}}
+{{--                                解决方案--}}
+{{--                                <span class="btn-toggle-x"></span>--}}
+{{--                            </div>--}}
+{{--                            <ul class="footer-menu-item">--}}
+{{--                                <li><a href="/solution/cloud.html"><span>云计算解决方案</span></a></li>--}}
+{{--                                <li><a href="/solution/performance.html"><span>高性能解决方案</span></a></li>--}}
+{{--                                <li><a href="/solution/bigdata.html"><span>大数据解决方案</span></a></li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
                         <div class="footer-menu col-lg-3">
                             <div class="title">
                                 技术支持
@@ -89,7 +89,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <span>© 2022 金信佳业 所有权利均予保留。</span>
-                            <span style="margin-left: 30px;"><a href="#">蜀ICP备19038118号-1</a></span>
+                            <span style="margin-left: 30px;"><a href="#"><br></br>蜀ICP备19038118号-1</a></span>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
         <img alt="客服小图标" src="/images/phone.png" class="img0">
         <img alt="客服小图标" src="/images/phone1.png" class="img1">
         <div class="tips phone">
-            咨询电话：15700352231
+            咨询电话：18108034533
         </div>
     </div>
 </div>

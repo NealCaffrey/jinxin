@@ -135,6 +135,7 @@
             $('#product-info').children('.container').hide();
             $('#product-info').children('.container').eq($(this).index()).show();
         });
+        //点击切换滑动图
         $('.banner-icon').click(function () {
             $(this).siblings().removeClass('flex-active');
             $(this).addClass('flex-active');
@@ -142,6 +143,26 @@
             $('.sliders').children('.slider').hide();
             $('.sliders').children('.slider').eq($(this).index()).show();
         });
+
+        //滑动图自动切换
+        var num = $('.sliders').children('.slider').length;
+        var count = 0
+        var timerStart = function () {
+            setTimeout(function () {
+                var f = arguments.callee;
+                count++;
+                count = count % num;
+                //图片
+                $('.sliders').children('.slider').hide();
+                $('.sliders').children('.slider').eq(count).show();
+                //icon
+                $('.flex-control-nav').children('.banner-icon').removeClass('flex-active');
+                $('.flex-control-nav').children('.banner-icon').eq(count).addClass('flex-active');
+                setTimeout(f, 3000);
+            }, 3000);
+        };
+        timerStart();
+
         $('.news-info').hover(function () {
             $(this).siblings().removeClass('news-active');
             $(this).addClass('news-active');

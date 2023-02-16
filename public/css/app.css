@@ -10864,6 +10864,9 @@ textarea.form-control-lg {
 .header-container .sh-nav-wrapper .sh-nav .sh-nav-logo span {
   width: 72px;
 }
+.header-container .sh-nav-wrapper .sh-nav .sh-nav-logo img {
+  width: 170px;
+}
 .header-container .sh-nav-wrapper .sh-nav .sh-nav-links {
   display: flex;
   flex-wrap: nowrap;
@@ -11949,6 +11952,11 @@ textarea.form-control-lg {
 #support .support-list img {
   width: 100%;
 }
+#support .support-list .dianhua {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
 #support .support-box {
   min-height: 125px;
   color: #2e3742;
@@ -12325,6 +12333,9 @@ textarea.form-control-lg {
   }
   .header-container .sh-nav-wrapper .sh-nav .sh-nav-logo {
     padding: 20px;
+  }
+  .header-container .sh-nav-wrapper .sh-nav .sh-nav-logo img {
+    width: 130px;
   }
   .header-container .sh-nav-wrapper .sh-service {
     display: none;
