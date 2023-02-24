@@ -103,23 +103,23 @@
                         <div class="server-info">
                             <img src="/images/yunwei.png">
                             <h3>IT运维/外包</h3>
-                            <span>研究表明，IT外包服务服务效率更高，成本更低，升级更容易。IT外包服务是企业迅速发展企业数字化，提高数字化质量、提高企业工作效率，节约信息化成本的一种途径，也为个人用户提供巨大的帮助。</span>
+                            <span>IT外包服务是企业迅速发展企业数字化，提高数字化质量、提高企业工作效率，节约信息化成本的一种途径，也为个人用户提供巨大的帮助</span>
                         </div>
                     </div>
 
                     <div class="col-12 col-sm-4">
                         <div class="server-info">
                             <img src="/images/app.png">
-                            <h3>APP开发</h3>
-                            <span>移动互联网时代是全民的移动互联网时代，是每个人的时代，也是每个企业的时代。APP便捷了每个人的生活，APP开发让每个企业都开始了移动信息化进程。</span>
+                            <h3>维修服务</h3>
+                            <span>我们拥有专业技术过硬、工作经验丰富的维修团队，为您提供专业维修服务，能更好的保障公司业务的正常运作</span>
                         </div>
                     </div>
 
                     <div class="col-12 col-sm-4">
                         <div class="server-info">
-                            <img src="/images/zuli.png">
-                            <h3>设备租赁</h3>
-                            <span>IT设备购买成本高昂，对于初创公司来说租赁IT设备是一个更好的选择。通过租赁的方式可以有效减少资金占用和减轻资金负债状况。加快设备更新、避免技术落后的同时，降低投资风险</span>
+                            <img src="/images/jiejuefangan.png">
+                            <h3>IT技术方案提供</h3>
+                            <span>我们拥有丰富的技术解决方案，能够切实可行且能降低成本、提高效率。帮助客户作出更明智的决定，取得更有效的管理成果</span>
                         </div>
                     </div>
                 </div>

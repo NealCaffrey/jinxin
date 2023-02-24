@@ -74,11 +74,11 @@
 {{--                        </div>--}}
                         <div class="footer-menu col-lg-3">
                             <div class="title">
-                                技术支持
+                                联系我们
                                 <span class="btn-toggle-x"></span>
                             </div>
                             <ul class="footer-menu-item">
-                                <li><a href="/support.html"><span>技术支持</span></a></li>
+                                <li><a href="/support.html"><span>联系我们</span></a></li>
                             </ul>
                         </div>
                     </div>

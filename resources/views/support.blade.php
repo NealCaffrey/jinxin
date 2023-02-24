@@ -5,28 +5,43 @@
         <div class="container support-header">
             <div class="row">
                 <div class="col-12">
-                    <h1>技术支持</h1>
+{{--                    <h1>联系我们</h1>--}}
                 </div>
             </div>
         </div>
+
+        <div class="container support-list">
+            <div class="row">
+                <div class="col-6 col-sm-4">
+                    <img src="/images/dell.jpg" class="support-img">
+                    <div class="support-phone">028-62520997</div>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <img src="/images/lenovo.jpg" class="support-img">
+                    <div class="support-phone">028-62520822</div>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <img src="/images/h3c.jpg" class="support-img">
+                    <div class="support-phone">028-61111556</div>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <img src="/images/caojubian.png" class="support-img">
+                    <div class="support-phone">028-62522178</div>
+                </div>
+                <div class="col-6 col-sm-4">
+                    <img src="/images/qunhui.jpg" class="support-img">
+                    <div class="support-phone">028-62522108</div>
+                </div>
+            </div>
+        </div>
+
         <div class="container support-list">
             <div class="row">
                 <div class="col-12">
-                    <p>24小时热线电话，为您解决各种技术需求</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div>
-                        <img src="/images/zhuoji.png" style="width: 50px;">
-                        <span class="dianhua">028-61111556</span>
-                    </div>
+                    <span class="dianhua">技术支持：028-62522196</span>
                 </div>
                 <div class="col-12">
-                    <div>
-                        <img src="/images/dianhua.png" style="width: 50px;">
-                        <span class="dianhua">18108034533</span>
-                    </div>
+                    <span class="dianhua">24小时技术支持：17781486487</span>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
                 <nav class="sh-nav">
                     <a href="/">
                         <div class="sh-nav-logo">
-                            <img src="/images/logo.png">
+                            <img src="/images/logo4.png">
                         </div>
                     </a>
                     <div class="sh-nav-links">

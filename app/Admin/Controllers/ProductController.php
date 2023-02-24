@@ -50,7 +50,12 @@ class ProductController extends AdminController
 
             $form->text('name');
             $form->image('image')->uniqueName()->autoUpload()->rules('required');
-            $form->multipleImage('slide');
+            $form->multipleImage('slide')
+                ->autoUpload()
+                ->limit(5)
+                ->saving(function ($paths) {
+                return json_encode($paths);
+            });
 
             $form->embeds('attribute', '属性', function ($form) {
                 $attribute = Attribute::all();

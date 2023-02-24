@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     @yield('js')
 </head>
 <body>
@@ -23,7 +24,6 @@
 
     @include('layouts._footer')
 </body>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script>
     $(function () {
         //菜单选中样式
@@ -132,8 +132,8 @@
         $('.choose-item').click(function () {
             $(this).siblings().removeClass('active');
             $(this).addClass('active');
-            $('#product-info').children('.container').hide();
-            $('#product-info').children('.container').eq($(this).index()).show();
+            $('#product-info').children('div').hide();
+            $('#product-info').children('div').eq($(this).index()).show();
         });
         //点击切换滑动图
         $('.banner-icon').click(function () {

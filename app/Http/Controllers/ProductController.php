@@ -8,6 +8,7 @@ use App\Models\Business;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -68,10 +69,18 @@ class ProductController extends Controller
             return redirect('/');
         }
 
+        //推荐商品
+        $data = DB::table('product')
+            ->where('category_id', '=', $info->category_id)
+            ->limit(5)
+            ->get()
+            ->toArray();
+
         $info->attribute = @json_decode($info->attribute);
         $info->slide = @json_decode($info->slide);
         return view('product_info', [
-            'info' => $info
+            'info' => $info,
+            'recommend' => $data
         ]);
     }
 }
