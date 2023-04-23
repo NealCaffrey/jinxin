@@ -53,9 +53,9 @@
 
                         @if(!empty($navs))
                             @foreach($navs as $nav)
-                                <div class="sh-nav-link">
-                                    <div class="sh-nav-link-text">{{ $nav['title'] }}</div>
-                                    @if(!empty($nav['son']))
+                                @if(!empty($nav['son']))
+                                    <div class="sh-nav-link">
+                                        <div class="sh-nav-link-text">{{ $nav['title'] }}</div>
                                         <div class="sh-nav-link-wrapper" style="display: none">
                                             <div class="sh-menu">
                                                 <div class="sh-menu-grid-container">
@@ -74,8 +74,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    @endif
-                                </div>
+                                    </div>
+                                @else
+                                    <a href="{{ $nav['url'] }}">
+                                        <div class="sh-nav-link">
+                                            <div class="sh-nav-link-text">{{ $nav['title'] }}</div>
+                                        </div>
+                                    </a>
+                                @endif
                             @endforeach
                         @endif
                     </div>
@@ -155,12 +161,23 @@
 
                             @if(!empty($navs))
                                 @foreach($navs as $nav)
-                                    <div class="sh-menu-mob-d1">
-                                        <button class="sh-menu-mob-d1-toggle">
-                                            <span>{{$nav['title']}}</span>
-                                            <span class="sh-menu-mob-d1-toggle-arrow"></span>
-                                        </button>
-                                    </div>
+                                    @if(!empty($nav['son']))
+                                            <div class="sh-menu-mob-d1">
+                                                <button class="sh-menu-mob-d1-toggle">
+                                                    <span>{{$nav['title']}}</span>
+                                                    <span class="sh-menu-mob-d1-toggle-arrow"></span>
+                                                </button>
+                                            </div>
+                                        @else
+                                            <a href="{{ $nav['url'] }}">
+                                                <div class="sh-menu-mob-d1">
+                                                    <button class="sh-menu-mob-d1-toggle">
+                                                        <span>{{$nav['title']}}</span>
+                                                        <span class="sh-menu-mob-d1-toggle-arrow"></span>
+                                                    </button>
+                                                </div>
+                                            </a>
+                                    @endif
                                 @endforeach
                             @endif
                         </div>

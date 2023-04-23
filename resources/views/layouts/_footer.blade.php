@@ -103,7 +103,7 @@
         在线<br>客服
     </div>
     <div class="contact qq">
-        <a href="http://wpa.qq.com/msgrd?v=3&uin=2289556365&site=&menu=yes">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=89989613&site=&menu=yes">
             <img alt="客服小图标" src="/images/qq.png" class="img0">
             <img alt="客服小图标" src="/images/qq1.png" class="img1">
         </a>
@@ -111,7 +111,7 @@
     <div class="contact wechat">
         <img alt="客服小图标" src="/images/wechat.png" class="img0">
         <img alt="客服小图标" src="/images/wechat1.png" class="img1">
-        <div class="tips wechat" style="background-image:url(https://www.xuewangzhan.net/wp-content/themes/xwz/images/js/kefu/gzhEwm.png)"></div>
+        <div class="tips wechat" style="background-image:url('/images/wechat.jpg')"></div>
     </div>
     <div class="contact phone">
         <img alt="客服小图标" src="/images/phone.png" class="img0">

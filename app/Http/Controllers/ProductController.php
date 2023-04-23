@@ -27,17 +27,15 @@ class ProductController extends Controller
         $brandIds = [];
         $appearanceIds = [];
         if ($request->filled('category')) {
-            $categoryIds = explode(',', $request->input('category'));
-
-            //只选择了一个分类的时候，判断是否为一级分类
-            if (count($categoryIds) == 1) {
-                $categoryInfo = Category::find($categoryIds[0]);
-                if ($categoryInfo->parent_id == 0) {
-                    $categoryList = Category::where('parent_id', '=', $categoryInfo->id)->get(['id'])->toArray();
-                    $categoryIds = array_column($categoryList, 'id');
+            $categoryInfo = Category::find($request->input('category'));
+            if ($categoryInfo->parent_id == 0) {
+                $categoryList = Category::where('parent_id', '=', $categoryInfo->id)->get(['id'])->toArray();
+                if (!empty($categoryList)) {
+                    $categoryIds = [$categoryList[0]['id']];
                 }
+            } else {
+                $categoryIds = [$request->input('category')];
             }
-
 
             $query->whereIn('category_id', $categoryIds);
         }

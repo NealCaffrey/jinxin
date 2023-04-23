@@ -39,7 +39,7 @@
                                         @if(!empty($cate['son']))
                                             @foreach($cate['son'] as $son)
                                                 <label class="checkbox" style="margin-left: 20px;">
-                                                    <input type="checkbox" name="category_id" style="display: none"  value="{{ $son['id'] }}" @if(in_array($son['id'], $categoryIds)) checked="true" @endif>
+                                                    <input type="radio" name="category_id" style="display: none"  value="{{ $son['id'] }}" @if(in_array($son['id'], $categoryIds)) checked="true" @endif>
                                                     <span class="checkbox-icon @if(in_array($son['id'], $categoryIds)) checkbox-icon-active @endif"></span>
                                                     <span class="align-fix">{{ $son['name'] }}</span>
                                                 </label>
