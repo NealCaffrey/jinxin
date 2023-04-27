@@ -62,7 +62,7 @@ class ProductController extends AdminController
                 //属性字段
                 foreach ($attribute as $attr)
                 {
-                    $form->text($attr->name);
+                    $form->text($attr->id, $attr->name);
                 }
             })->saving(function ($v) {
                 // 转化为json格式存储
