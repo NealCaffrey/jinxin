@@ -24,9 +24,10 @@
                     @if(!empty($info->attribute))
                         <div class="row param">
                             @foreach($info->attribute as $key => $attr)
-                                @if(!empty($attr) && is_string($attr))
+                                @if(isset($attribute[$key]))
                                     <div class="col-6">
-                                        {{ $key }}：{{ $attr }}
+                                        <span style="display: inline-block;width: 75px;text-align-last: justify">{{ $attribute[$key] }}</span>
+                                        <span>：{{ $attr }}</span>
                                     </div>
                                 @endif
                             @endforeach

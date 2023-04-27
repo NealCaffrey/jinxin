@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Appearance;
+use App\Models\Attribute;
 use App\Models\Brand;
 use App\Models\Business;
 use App\Models\Category;
@@ -67,6 +68,10 @@ class ProductController extends Controller
             return redirect('/');
         }
 
+        //属性
+        $attribute = Attribute::all()->toArray();
+        $attribute = array_column($attribute, 'name', 'id');
+
         //推荐商品
         $data = DB::table('product')
             ->where('category_id', '=', $info->category_id)
@@ -78,7 +83,8 @@ class ProductController extends Controller
         $info->slide = @json_decode($info->slide);
         return view('product_info', [
             'info' => $info,
-            'recommend' => $data
+            'recommend' => $data,
+            'attribute' => $attribute
         ]);
     }
 }
