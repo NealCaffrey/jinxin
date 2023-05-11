@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Example;
 use App\Models\News;
+use App\Models\Page;
 use App\Models\Product;
 use App\Models\Slide;
 use App\Models\Solution;
@@ -66,7 +67,10 @@ class IndexController extends Controller
      */
     public function support()
     {
-        return view('support');
+        $data = DB::table('pages')->where('key_name', '=', 'support')->first();
+        return view('support', [
+            'data' => $data
+        ]);
     }
 
     /**

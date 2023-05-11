@@ -102,12 +102,12 @@
     <div class="kf">
         在线<br>客服
     </div>
-    <div class="contact qq">
-        <a href="http://wpa.qq.com/msgrd?v=3&uin=89989613&site=&menu=yes">
-            <img alt="客服小图标" src="/images/qq.png" class="img0">
-            <img alt="客服小图标" src="/images/qq1.png" class="img1">
-        </a>
-    </div>
+{{--    <div class="contact qq">--}}
+{{--        <a href="http://wpa.qq.com/msgrd?v=3&uin=89989613&site=&menu=yes">--}}
+{{--            <img alt="客服小图标" src="/images/qq.png" class="img0">--}}
+{{--            <img alt="客服小图标" src="/images/qq1.png" class="img1">--}}
+{{--        </a>--}}
+{{--    </div>--}}
     <div class="contact wechat">
         <img alt="客服小图标" src="/images/wechat.png" class="img0">
         <img alt="客服小图标" src="/images/wechat1.png" class="img1">

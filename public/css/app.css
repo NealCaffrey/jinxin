@@ -11470,6 +11470,7 @@ textarea.form-control-lg {
 }
 #home .brand-list .brand-info {
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 #home .brand-list .brand-info img:hover {
   transform: scale(1.1);
@@ -11809,7 +11810,6 @@ textarea.form-control-lg {
   width: 100%;
   height: 320px;
   background-image: url("/images/business_bg.jpg");
-  background-repeat: no-repeat;
 }
 #case #intro .container {
   padding-top: 100px;
@@ -12386,6 +12386,7 @@ textarea.form-control-lg {
   }
   #home .brand-list .brand-info {
     margin-top: 20px;
+    margin-bottom: 0;
   }
   #home .slider {
     background-position: -400px 0px;
