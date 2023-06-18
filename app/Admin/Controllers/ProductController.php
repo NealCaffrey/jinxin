@@ -57,6 +57,11 @@ class ProductController extends AdminController
                 return json_encode($paths);
             });
 
+            $form->text('price', '价格')->type('number')->rules('required');
+            $form->text('phone', '电话');
+            $form->text('qq', 'QQ');
+            $form->text('wechat', '微信');
+
             $form->embeds('attribute', '属性', function ($form) {
                 $attribute = Attribute::all();
                 //属性字段

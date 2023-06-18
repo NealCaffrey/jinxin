@@ -79,12 +79,19 @@ class ProductController extends Controller
             ->get()
             ->toArray();
 
+        //联系方式
+        $contact = false;
+        if (!empty($info->phone) || !empty($info->qq) || !empty($info->wechat)) {
+            $contact = true;
+        }
+
         $info->attribute = @json_decode($info->attribute);
         $info->slide = @json_decode($info->slide);
         return view('product_info', [
             'info' => $info,
             'recommend' => $data,
-            'attribute' => $attribute
+            'attribute' => $attribute,
+            'contact'   => $contact
         ]);
     }
 }
