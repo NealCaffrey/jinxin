@@ -67,7 +67,7 @@ class IndexController extends Controller
      */
     public function support()
     {
-        $data = DB::table('pages')->where('key_name', '=', 'support')->first();
+        $data = DB::table('pages')->where('title', '=', 'support')->first();
         return view('support', [
             'data' => $data
         ]);
