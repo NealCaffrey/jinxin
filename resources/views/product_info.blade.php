@@ -71,27 +71,6 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-2 d-none d-xl-block" id="product-recommend">
-
-                @if($contact)
-                    <div style="border: 1px solid #f0f0f0;margin-bottom: 30px;">
-                        <div class="recommend-title">
-                            <span>联系我们</span>
-                        </div>
-                        <div class="recommend-box">
-                            @if(!empty($info->phone))
-                                <div class="product-contact"><img src="/images/phone1.png">{{$info->phone}}</div>
-                            @endif
-                            @if(!empty($info->qq))
-                                <div class="product-contact"><img src="/images/qq1.png">{{$info->qq}}</div>
-                            @endif
-                            @if(!empty($info->wechat))
-                                <div class="product-contact"><img src="/images/wechat1.png">{{$info->wechat}}</div>
-                            @endif
-                        </div>
-                    </div>
-                @endif
-
-
                 @if(!empty($recommend))
                     <div style="border: 1px solid #f0f0f0">
                         <div class="recommend-title">
@@ -110,6 +89,7 @@
                     </div>
                 @endif
             </div>
+
             <div class="col-12 col-xl-10" id="product-info">
                 <div class="product-content">
                     {!! $info->content !!}
@@ -117,6 +97,27 @@
                 <div class="product-attribute" style="display: none">
                     {!! $info->spec !!}
                 </div>
+            </div>
+
+            <div class="col-12 col-xl-2" id="product-recommend">
+                @if($contact)
+                    <div style="border: 1px solid #f0f0f0;margin-bottom: 30px;">
+                        <div class="recommend-title">
+                            <span>联系我们</span>
+                        </div>
+                        <div class="recommend-box">
+                            @if(!empty($info->phone))
+                                <div class="product-contact"><img src="/images/phone1.png">{{$info->phone}}</div>
+                            @endif
+                            @if(!empty($info->qq))
+                                <div class="product-contact"><img src="/images/qq1.png">{{$info->qq}}</div>
+                            @endif
+                            @if(!empty($info->wechat))
+                                <div class="product-contact"><img src="/images/wechat1.png">{{$info->wechat}}</div>
+                            @endif
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
