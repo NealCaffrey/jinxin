@@ -26,6 +26,7 @@ Route::group([
     $router->resource('appearance', 'AppearanceController');
     $router->resource('solution', 'SolutionController');
     $router->resource('page', 'PageController');
+    $router->resource('config', 'ConfigController');
 
     $router->get('/api/nav_tree', 'CommonController@getNavTree');
     $router->get('/api/category_list', 'CommonController@getCategoryList');

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="author" content="金信佳业">
-    <meta name="description" content="金信佳业">
-    <meta name="keyword" content="金信佳业、服务器、网络存储">
+    <meta name="author" content="{{ $configs['author'] ?? '' }}">
+    <meta name="description" content="{{ $configs['desc'] ?? '' }}">
+    <meta name="keyword" content="{{ $configs['keywords'] ?? '' }}">
     <title>金信佳业</title>
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">

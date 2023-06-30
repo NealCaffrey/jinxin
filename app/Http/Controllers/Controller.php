@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Business;
 use App\Models\Category;
+use App\Models\Config;
 use App\Models\Nav;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -26,10 +27,13 @@ class Controller extends BaseController
         $navs = getTree(Nav::all()->toArray());
         //业务
         $business = Business::getHomeBusiness();
+        //配置
+        $configs = Config::getSiteConfigs();
 
         view()->share('category', $category);
         view()->share('brands', $brands);
         view()->share('navs', $navs);
         view()->share('business', $business);
+        view()->share('configs', $configs);
     }
 }
