@@ -7,7 +7,7 @@
     <meta name="author" content="{{ $configs['author'] ?? '' }}">
     <meta name="description" content="{{ $configs['desc'] ?? '' }}">
     <meta name="keyword" content="{{ $configs['keywords'] ?? '' }}">
-    <title>金信佳业</title>
+    <title>{{ $configs['title'] ?? '' }}</title>
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>

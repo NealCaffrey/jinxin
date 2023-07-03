@@ -19,6 +19,7 @@ class ConfigController extends AdminController
     {
         return Grid::make(new Config(), function (Grid $grid) {
             $grid->column('id')->sortable();
+            $grid->column('name', 'key');
             $grid->column('desc', '配置名称');
             $grid->column('content', '配置内容');
             $grid->column('created_at');
@@ -29,9 +30,7 @@ class ConfigController extends AdminController
 
             });
 
-            $grid->disableCreateButton();
             $grid->disableViewButton();
-            $grid->disableDeleteButton();
         });
     }
 
@@ -43,8 +42,15 @@ class ConfigController extends AdminController
     protected function form()
     {
         return Form::make(new Config(), function (Form $form) {
-            $form->display('desc');
-            $form->text('content');
+            if ($form->isCreating()) {
+                $form->text('name', 'key');
+                $form->text('desc', '配置名称');
+                $form->text('content', '配置内容');
+            } else {
+                $form->display('name', 'key');
+                $form->display('desc', '配置名称');
+                $form->text('content', '配置内容');
+            }
 
             $form->disableHeader();
             $form->footer(function ($footer) {
