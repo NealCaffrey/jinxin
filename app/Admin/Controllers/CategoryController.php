@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Appearance;
 use App\Models\Category;
 use Dcat\Admin\Form;
 use Dcat\Admin\Layout\Content;
@@ -35,6 +36,11 @@ class CategoryController extends AdminController
                     return (int) $v;
                 });
             $form->text('name')->rules('required');
+            $form->multipleSelect('appearance_id', '外观')
+                ->options('/api/appearance_list')
+                ->saving(function ($v) {
+                    return implode(',', $v);
+                });
         });
     }
 }

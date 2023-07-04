@@ -19,9 +19,6 @@ class ProductController extends Controller
         $category = getTree(Category::getProductCategory());
         //品牌
         $brand = Brand::getNavBrand();
-        //外观
-        $appearance = Appearance::getProductList();
-
         //产品
         $query = Product::query();
         $categoryIds = [];
@@ -47,6 +44,12 @@ class ProductController extends Controller
         if ($request->filled('appearance')) {
             $appearanceIds = explode(',', $request->input('appearance'));
             $query->whereIn('appearance_id', $appearanceIds);
+        }
+
+        //外观
+        $appearance = [];
+        if (!empty($categoryInfo)) {
+            $appearance = (new Appearance())->whereIn('id', explode(',', $categoryInfo->appearance_id))->get()->toArray();
         }
 
         $product = $query->paginate(16);

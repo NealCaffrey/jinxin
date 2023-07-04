@@ -68,13 +68,13 @@
                             </div>
                         </div>
 
-                        <div class="group group-active">
-                            <h3 class="btn-collapse">
-                                <span class="flex1">外观</span>
-                                <span class="btn-toggle"></span>
-                            </h3>
-                            <div class="options">
-                                @if(!empty($appearances))
+                        @if(!empty($appearances))
+                            <div class="group group-active">
+                                <h3 class="btn-collapse">
+                                    <span class="flex1">外观</span>
+                                    <span class="btn-toggle"></span>
+                                </h3>
+                                <div class="options">
                                     @foreach($appearances as $appearance)
                                         <label class="checkbox">
                                             <input type="radio" name="appearance_id" style="display: none" value="{{ $appearance['id'] }}" @if(in_array($appearance['id'], $appearanceIds)) checked="true" @endif>
@@ -82,9 +82,10 @@
                                             <span class="align-fix">{{ $appearance['name'] }}</span>
                                         </label>
                                     @endforeach
-                                @endif
+                                </div>
                             </div>
-                        </div>
+                        @endif
+
                     </div>
                 </div>
 
