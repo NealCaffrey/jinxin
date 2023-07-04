@@ -26,10 +26,12 @@ class ProductController extends Controller
         $appearanceIds = [];
         if ($request->filled('category')) {
             $categoryInfo = Category::find($request->input('category'));
+            //一级分类
             if ($categoryInfo->parent_id == 0) {
                 $categoryList = Category::where('parent_id', '=', $categoryInfo->id)->get(['id'])->toArray();
+                //那么跳转到首个二级分类
                 if (!empty($categoryList)) {
-                    $categoryIds = [$categoryList[0]['id']];
+                    return redirect('/product.html?category=' . $categoryList[0]['id']);
                 }
             } else {
                 $categoryIds = [$request->input('category')];
@@ -60,7 +62,8 @@ class ProductController extends Controller
             'list'          => $product,
             'categoryIds'   => $categoryIds,
             'brandIds'      => $brandIds,
-            'appearanceIds'      => $appearanceIds
+            'appearanceIds' => $appearanceIds,
+            'params'        => $request->post()
         ]);
     }
 

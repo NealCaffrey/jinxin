@@ -110,7 +110,7 @@
                                     </div>
                                 @endforeach
                                     <div>
-                                        {{ $list->links() }}
+                                        {{ $list->appends(['category' => $params['category'] ?? '', 'brand' => $params['brand'] ?? '', 'appearance' => $params['appearance'] ?? ''])->links() }}
                                     </div>
                             @else
                                 <div class="col-12">
