@@ -1656,6 +1656,9 @@
                 margin-top: 10px;
             }
         }
+        .slidershow {
+            height: 200px;
+        }
     }
     .header-container {
         height: 50px;
@@ -1764,11 +1767,6 @@
             }
         }
     }
-    #home {
-        .slidershow {
-            height: 500px;
-        }
-    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439.98px){
@@ -1777,6 +1775,9 @@
             .news-item {
                 margin-top: 10px;
             }
+        }
+        .slidershow {
+            height: 350px;
         }
     }
     .header-container {

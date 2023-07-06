@@ -9,9 +9,9 @@
                         @if(!empty($slides))
                             @foreach($slides as $k => $slide)
                                 @if($k == 0)
-                                    <li class="slider" data-url="{{ $slide['url'] }}" style="background-image: url('/uploads/{{ $slide['image'] }}')"></li>
+                                    <li class="slider" data-url="{{ $slide['url'] }}" style="background: url('/uploads/{{ $slide['image'] }}');background-size: 100% 100%"></li>
                                 @else
-                                    <li class="slider" data-url="{{ $slide['url'] }}" style="display: none;background-image: url('/uploads/{{ $slide['image'] }}')"></li>
+                                    <li class="slider" data-url="{{ $slide['url'] }}" style="display: none;background: url('/uploads/{{ $slide['image'] }}');background-size: 100% 100%"></li>
                                 @endif
                             @endforeach
                         @endif
