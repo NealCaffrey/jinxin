@@ -59,17 +59,17 @@
         });
         //搜索
         $('#search-button').click(function () {
-            window.location.href = "http://jinxin.test/search.html?keyword=" + $('#header-search-input').val();
+            window.location.href = "/search.html?keyword=" + $('#header-search-input').val();
         });
         $('#search-submit').submit(function () {
-            window.location.href = "http://jinxin.test/search.html?keyword=" + $('#header-search-input').val();
+            window.location.href = "/search.html?keyword=" + $('#header-search-input').val();
         });
         $('#search-submit-sm').submit(function () {
-            window.location.href = "http://jinxin.test/search.html?keyword=" + $('#header-search-input-sm').val();
+            window.location.href = "/search.html?keyword=" + $('#header-search-input-sm').val();
         });
         //搜索结果
         $('#search-result-submit').click(function () {
-            window.location.href = "http://jinxin.test/search.html?keyword=" + $('#search-keyword').val();
+            window.location.href = "/search.html?keyword=" + $('#search-keyword').val();
         });
         //产品筛选
         $('.btn-collapse').click(function () {
