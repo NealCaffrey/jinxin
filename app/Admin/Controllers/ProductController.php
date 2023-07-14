@@ -74,8 +74,8 @@ class ProductController extends AdminController
                 return json_encode($v);
             });
 
-            $form->editor('content')->imageDirectory('/tinymce/images')->rules('required');
-            $form->editor('spec')->imageDirectory('/tinymce/images')->rules('required');
+            $form->editor('content')->rules('required');
+            $form->editor('spec')->rules('required');
 
             $form->disableHeader();
             $form->footer(function ($footer) {

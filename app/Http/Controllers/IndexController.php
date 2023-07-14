@@ -11,9 +11,31 @@ use App\Models\Slide;
 use App\Models\Solution;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class IndexController extends Controller
 {
+    /*
+     * 上传图片
+     */
+    public function uploadImage(Request $request)
+    {
+        $sign = 'sfjsdlfsNLKNSDOIJL';
+        if ($request->post('sign') != $sign) {
+            return response()->json(['errno' => 1, 'message' => '非法请求']);
+        }
+
+        $image = $request->file('image')->store('/editor/' . date('Y-m-d'));
+        return response()->json([
+            'errno' => 0,
+            'data' => [
+                'url' => Storage::url($image),
+                'alt' => '',
+                'href' => ''
+            ]
+        ]);
+    }
+
     /**
      * 首页
      */

@@ -32,6 +32,8 @@ Route::get('/case/{id}', [CaseController::class, 'info']);
 Route::get('/news.html', [NewsController::class, 'index']);
 Route::get('/news/{id}.html', [NewsController::class, 'info']);
 //解决方案
-Route::get('/solution.html', [IndexController::class, 'solution']);//解决方案
-Route::get('/solution/{id}.html', [IndexController::class, 'solutionInfo']);//解决方案
+Route::get('/solution.html', [IndexController::class, 'solution']);
+Route::get('/solution/{id}.html', [IndexController::class, 'solutionInfo']);
+//上传图片
+Route::post('jinxin_upload', [IndexController::class, 'uploadImage']);
 
