@@ -32,6 +32,30 @@
         _token:"{!! csrf_token() !!}",
         sign:"sfjsdlfsNLKNSDOIJL"
     }
+    editor.config.colors = [
+    '#000000',
+    '#FFFFFF',
+    '#FF0000',
+    '#00FF00',
+    '#0000FF',
+    '#FFFF00',
+    '#00FFFF',
+    '#FF00FF',
+    '#C0C0C0',
+    '#808080',
+    '#FFA07A',
+    '#FFA500',
+    '#808000',
+    '#800080',
+    '#FFD700',
+    '#A52A2A',
+    '#D2691E',
+    '#EE82EE',
+    '#006400',
+    '#008B8B',
+    '#8B008B',
+    '#00008B'
+    ];
 
     editor.config.onchange = function (html) {
         $this.parents('.form-field').find('input[type="hidden"]').val(html);
